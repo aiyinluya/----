@@ -7,7 +7,7 @@ namespace Prototype_原型模式.Examples_Shape图形_实例1
 {
     public class ShapeCache_图形缓存
     {
-        private static   Hashtable  shapeMap  = new Hashtable ();
+        private static Hashtable  shapeMap  = new Hashtable ();
 
         public static Shape_抽象图形 getShape(String shapeId)
         {
