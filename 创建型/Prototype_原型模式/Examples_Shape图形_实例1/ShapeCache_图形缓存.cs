@@ -21,7 +21,7 @@ namespace Prototype_原型模式.Examples_Shape图形_实例1
         public static void LoadCache()
         {
             Circle__圆形 circle = new Circle__圆形();
-            circle. setId("1");
+            circle.setId("1");
             shapeMap.Add(circle.getId(), circle);
 
             Square_正方形 square = new Square_正方形();
