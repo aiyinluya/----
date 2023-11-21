@@ -7,13 +7,17 @@ namespace Singleton_单例模式.Examlpes_Singleton_懒汉模式_实例2
     public class Singleton_懒汉模式
     {
         private static Singleton_懒汉模式 instance;
+        private static object obj = new object();
         private Singleton_懒汉模式() { }
 
         public static   Singleton_懒汉模式 getInstance()
         {
-            if (instance == null)
-            {
-                instance = new Singleton_懒汉模式();
+            if (instance == null) {
+                lock (obj) {
+                    if (instance == null) {
+                        instance = new Singleton_懒汉模式();
+                    }
+                }
             }
             return instance;
         }
